@@ -1,0 +1,4 @@
+name: modbook
+recipe: drupal10
+config:
+  webroot: web
