@@ -1,0 +1,22 @@
+name: Modbook
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - modbook/base
+  - modbook/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - modbook/user
+  core/drupal.dropbutton:
+    - modbook/dropbutton
+  core/drupal.dialog:
+    - modbook/dialog
+  file/drupal.file:
+    - modbook/file
+  core/drupal.progress:
+    - modbook/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.11-dev#unknown-commit'
