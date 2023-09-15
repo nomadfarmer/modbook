@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: cec78e4d-2fff-495e-a31c-4744bd7ea216
+name: "Joby's Scratchpad"
+mail: joby@slightlymagnificent.com
+slogan: 'Learning about module development and css'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
