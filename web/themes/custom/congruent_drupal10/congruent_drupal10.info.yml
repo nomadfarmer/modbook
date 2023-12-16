@@ -1,0 +1,26 @@
+name: 'Congruent Drupal 10'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - congruent_drupal10/congruent_drupal10
+  - congruent_drupal10/layout
+  - congruent_drupal10/google-fonts
+  - congruent_drupal10/base
+  - congruent_drupal10/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - congruent_drupal10/user
+  core/drupal.dropbutton:
+    - congruent_drupal10/dropbutton
+  core/drupal.dialog:
+    - congruent_drupal10/dialog
+  file/drupal.file:
+    - congruent_drupal10/file
+  core/drupal.progress:
+    - congruent_drupal10/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.1.0'
+description: "Custom theme for the congruent_drupal10 portal, built from Drupal 10's Starterkit."

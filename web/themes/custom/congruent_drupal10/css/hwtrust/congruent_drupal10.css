@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Overall site layout.
+ */
+
+body {
+  font-family: "Roboto","Helvetica Neue","Ubuntu", sans-serif;
+  font-weight: 300;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a:link,
+a:visited {
+  color: #038cac;
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+
+a:active,
+a:hover {
+  color: #106478;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+.border-top {
+  border-top: 1px dashed #ddd;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+}

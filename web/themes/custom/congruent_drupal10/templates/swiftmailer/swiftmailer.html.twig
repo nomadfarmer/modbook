@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * The default template file for e-mails.
+ *
+ * Available variables:
+ * - subject: The subject.
+ * - body: The message content.
+ * - message: The $message array created and used in the mail building
+ *   procedure. Its content varies between cases, but typically contains at
+ *   least the following elements:
+ *   - id: The message identifier.
+ *   - module: The module that handles the building of the message.
+ *   - key: The key of the message.
+ *   - to: The recipient email address.
+ *   - from: The email address of the sender.
+ *   - langcode: The langcode to use to compose the e-mail.
+ *   - params: The message parameters.
+ *
+ * This template may be overriden by module and/or mail key, using any of the
+ * following template names:
+ * - swiftmailer.html.twig: global, used by default.
+ * - swiftmailer--mymodule.html.twig: only emails sent by the module "mymodule".
+ * - swiftmailer--mymodule--test.html.twig: only emails by the module
+ *   "mymodule" with key "test".
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_swiftmailer()
+ *
+ * @ingroup themeable
+ */
+#}
+<html>
+<head>
+
+</head>
+<body>
+<div>
+  <div style="width: 100%; margin-bottom: 15px; padding: 35px; border-bottom: 1px dotted #ccc; text-align: center;">
+    <img src="https://hwtrust.geouaw.org/themes/custom/hwtrust/email/logo-email1.png" style="width: 100px; margin: 0 auto;">
+  </div>
+  <table align="center" style="max-width: 650px;" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="padding-left: 20px; padding-right: 20px; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">
+        {{ body }}
+      </td>
+    </tr>
+  </table>
+  <div style="color: #999; width: 100%; font-size: 12px; margin-top: 15px; padding: 25px; border-top: 1px dotted #ccc;">
+    <table align="center" style="max-width: 650px;" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="padding-left: 20px; padding-right: 20px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
+          <p>UAW/UMass Health & Welfare Trust Fund<br>
+          Phone: (413) 345-2156 | Fax: (866) 795-2684</p>
+          
+          <p><a href="https://www.uawumasstrustfund.org">Visit our website for more information and to apply for benefits</a><br>
+          <a href="https://www.facebook.com/UAWUMassHWTF/">Like us on Facebook!</a><br>
+          <a href="https://twitter.com/UAW_UMass_HWTF">Follow us on Twitter!</a></p>
+          
+          <p>Confidentiality Notice: This message, including any attachments, is confidential and privileged information intended only for review by the designated recipient(s). If the reader of this message is not the intended recipient, or an agent responsible for delivering it to the intended recipient, you are hereby notified that any unauthorized use, distribution, copying or retention of this email or the information contained in it is strictly prohibited.  If you are not the intended recipient, please immediately contact the sender by reply email and delete this email and any attachments.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

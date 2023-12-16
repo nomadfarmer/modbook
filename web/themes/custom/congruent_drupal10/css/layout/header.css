@@ -1,0 +1,48 @@
+/**
+ * @file
+ * Overall site layout.
+ */
+
+.header {
+  border-bottom: 1px dotted #ddd;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.site-logo {
+  display: inline-block;
+  max-width: 100px;
+}
+
+.navigation {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px dotted #ddd;
+}
+
+.user-nav .menu {
+  margin: 0;
+}
+
+.user-nav .menu-item {
+  display: inline-block;
+  padding-top: 0;
+}
+
+.user-nav .menu-item a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.user-nav .menu-item a.active {
+  background-color: #f3f3f3;
+  color: #106478;
+  font-weight: 500;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+.user-nav .menu-item a.active:hover,
+.user-nav .menu-item a.active:active {
+  background-color: #eee;
+}
