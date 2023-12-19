@@ -1,0 +1,26 @@
+name: 'Modbook from congruent'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - modbook2/congruent_drupal10
+  - modbook2/layout
+  - modbook2/google-fonts
+  - modbook2/base
+  - modbook2/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - modbook2/user
+  core/drupal.dropbutton:
+    - modbook2/dropbutton
+  core/drupal.dialog:
+    - modbook2/dialog
+  file/drupal.file:
+    - modbook2/file
+  core/drupal.progress:
+    - modbook2/progress
+core_version_requirement: ^10
+generator: 'congruent_drupal10:10.2.0'
+description: 'Simple theme based on the congruent starterkit.'

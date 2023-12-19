@@ -1,0 +1,159 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\file\Entity\File;
+use Drupal\Core\Entity;
+use Drupal\Core\Render\Markup;
+use Drupal\Component\Utility\Xss;
+use Drupal\views\Views;
+
+/**
+ * Implementation of hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function congruent_drupal9_preprocess_html(&$variables) {
+
+  // Set titles (this replaces what the Metatag module was doing).
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['#attached']['library'][] = 'congruent_drupal9/frontpage';
+  }
+
+  // Add information about the number of sidebars.
+  if (isset($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_first'])) {
+    $classes = [
+      'one-sidebar',
+      'sidebar-first',
+    ];
+  }
+  elseif (isset($variables['page']['sidebar_second']) && !empty($variables['page']['sidebar_second'])) {
+    $classes = [
+      'one-sidebar',
+      'sidebar-second',
+    ];
+  }
+  else {
+    $classes = [
+      'no-sidebars',
+    ];
+  }
+
+  // Add classes about the current URL/path.
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_path = substr($current_path, 1);
+  $path_array = explode('/', $current_path);
+  foreach ($path_array as $key => $path_component) {
+    if (empty($path_component) || is_numeric($path_component)) {
+      unset($path_array[$key]);
+    }
+  }
+
+  // Get the current alias and strip the "/" fron the beginning.
+  $current_alias = \Drupal::service('path_alias.manager')->getAliasByPath('/' . $current_path);
+  $current_alias = substr($current_alias, 1);
+  $current_alias_array = explode('/', $current_alias);
+  $classes[] = 'section-' . $current_alias_array[0];
+  $classes[] = 'page-' . implode('-', $current_alias_array);
+
+  $classes[] = 'page-' . implode('-', $path_array);
+  $classes[] = 'page-' . str_replace('/', '-', $current_path);
+
+  // Add a class about the current URL section.
+  if (strpos($current_path, 'node/') !== FALSE) {
+
+    // Nodes.
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+
+      // Add a CSS class for article node types.
+      $type = $node->bundle();
+    }
+  }
+
+  // Add classes to the template.
+  if (!empty($classes)) {
+    foreach ($classes as $class) {
+      $variables['attributes']['class'][] = $class;
+    }
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_HOOK() for HTML document templates.
+ */
+function congruent_drupal9_preprocess_page(&$variables) {
+  $variables['page']['show_title'] = TRUE;
+  if (isset($variables['node']) && is_object($variables['node'])) {
+    $node = $variables['node'];
+    $type = $node->bundle();
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_HOOK() for HTML document templates.
+ */
+function congruent_drupal9_preprocess_node(&$variables) {
+  $node = $variables['node'];
+}
+
+/**
+ * Implementation of hook_preprocess_HOOK() for page title templates.
+ */
+function congruent_drupal9_preprocess_page_title(&$variables) {
+  
+}
+
+/**
+ * Implementation of template_preprocess_views_view_field().
+ */
+function congruent_drupal9_preprocess_views_view_field(&$variables) {
+  
+}
+
+/**
+ * Implementation of hook_preprocess_HOOK() for maintenance-page.html.twig.
+ */
+function congruent_drupal9_preprocess_maintenance_page(&$variables) {
+
+}
+
+/**
+ * Implementation of hook_preprocess_HOOK() for block.html.twig.
+ */
+function congruent_drupal9_preprocess_block(&$variables) {
+
+}
+
+function congruent_drupal9_preprocess_facets_item_list(&$variables) {
+
+}
+
+/**
+ * Implementation of theme_preprocess_field().
+ */
+function congruent_drupal9_preprocess_field(&$variables, $hook) {
+  if ($variables['field_name'] == 'field_paragraphs') {
+    
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_HOOK() for menu.html.twig.
+ */
+function congruent_drupal9_preprocess_menu(&$variables) {
+  foreach ($variables['items'] as $key => &$item) {
+    
+  }
+}
+
+/**
+ * Implementation of theme_preprocess_image_widget().
+ */
+function modbook2_preprocess_image_widget(array &$variables) {
+  
+}
