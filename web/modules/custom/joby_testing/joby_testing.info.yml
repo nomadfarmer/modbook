@@ -1,0 +1,5 @@
+name: Joby Test
+description: A module to practice creating PHPUnit tests.
+type: module
+core_version_requirement: ^10
+package: Joby
