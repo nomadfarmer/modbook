@@ -2,3 +2,5 @@ name: modbook
 recipe: drupal10
 config:
   webroot: web
+  composer: 2.8
+  php: 8.3
