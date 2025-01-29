@@ -25,6 +25,7 @@
     "require": {
         "composer/installers": "^2.0",
         "congruityworks/congruent_base": "*",
+        "congruityworks/congruent_user": "*",
         "drupal/admin_toolbar": "^3.4",
         "drupal/coffee": "^2.0",
         "drupal/core-composer-scaffold": "^10.0",
