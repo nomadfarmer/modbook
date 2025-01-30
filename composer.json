@@ -19,6 +19,7 @@
     "require": {
         "composer/installers": "^2.0",
         "congruityworks/congruent_base": "dev-2.x-develop",
+        "congruityworks/congruent_user": "dev-2.x-develop",
         "drupal/admin_toolbar": "^3.4",
         "drupal/coffee": "^2.0",
         "drupal/core-composer-scaffold": "^10.0",
@@ -80,7 +81,6 @@
 		"type:congruent-assets"
 	    ],
 
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
