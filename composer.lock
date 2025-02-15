@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "351d3526c9e1e7f3d81acf4bf83c7d21",
+    "content-hash": "224bb7dbd903eee8cfef94cdb2ee7bb3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2104,6 +2104,58 @@
             "homepage": "https://www.drupal.org/project/advancedqueue",
             "support": {
                 "source": "https://git.drupalcode.org/project/advancedqueue"
+            }
+        },
+        {
+            "name": "drupal/automated_testing_kit",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/automated_testing_kit.git",
+                "reference": "1.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/automated_testing_kit-1.3.0.zip",
+                "reference": "1.3.0",
+                "shasum": "f2c86ac92136910775d70910e7488e40c05155ea"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "php": ">=8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.3.0",
+                    "datestamp": "1732999801",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "André Angelantoni",
+                    "homepage": "https://www.drupal.org/u/aangel",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "ilyaukin",
+                    "homepage": "https://www.drupal.org/user/3813894"
+                }
+            ],
+            "description": "Provides tests and functions useful for automated testing.",
+            "homepage": "https://drupal.org/project/automated_testing_kit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/automated_testing_kit",
+                "issues": "https://www.drupal.org/project/issues/automated_testing_kit",
+                "slack": "https://drupal.slack.com/archives/C05DSFVJMD1"
             }
         },
         {
