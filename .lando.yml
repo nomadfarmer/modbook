@@ -2,7 +2,7 @@ name: modbook
 recipe: drupal10
 config:
   webroot: web
-  composer: 2.8
+  composer: 2-latest
   php: 8.3
 services:
   node:
